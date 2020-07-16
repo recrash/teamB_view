@@ -1,6 +1,7 @@
 package bookrental;
 
 import javax.persistence.*;
+import java.util.Date;
 import java.util.List;
 
 @Entity
@@ -12,8 +13,10 @@ public class View {
         private Long id;
         private Long rentalId;
         private Long bookId;
+        private Long blurayId;
         private Long useId;
         private String bookName;
+        private String blurayName;
         private Date regDate;
         private Integer rentalFee;
         private String rentalStaus;
@@ -92,4 +95,19 @@ public class View {
             this.returnDate = returnDate;
         }
 
+        public Long getBlurayId() {
+            return blurayId;
+        }
+
+        public void setBlurayId(Long blurayId) {
+            this.blurayId = blurayId;
+        }
+
+    public String getBlurayName() {
+        return blurayName;
+    }
+
+    public void setBlurayName(String blurayName) {
+        this.blurayName = blurayName;
+    }
 }
